@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white : hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+    --very-light-gray : hsl(0, 0%, 95%); /*background, headings, buttons*/
+    
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+}
+
+h1{
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+p,a{
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    margin: 80px auto;
+    width: 80%;
+    max-width: 700px;
+}
+
+.flex-item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 50px;
+    
+}
+
+.flex-title{
+    color: var(--transparent-white);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.flex-cta{
+    text-decoration: none;
+    text-align: center;
+    width: 120px;
+    padding: 10px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.flex-cta:hover{
+    background-color: transparent;
+    border: solid 2px var(--transparent-white);
+    
+}
+
+.flex-paragrahp{
+    color: var(--transparent-white);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.flex-item:nth-child(1){
+    background-color: var(--bright-orange);
+    border-radius: 8px 8px 0 0;
+}
+
+.flex-item:nth-child(1) .flex-cta{
+    color: var(--bright-orange);
+}
+
+.flex-item:nth-child(1) .flex-cta:hover{
+    color: var(--transparent-white);
+}
+
+
+.flex-item:nth-child(2){
+    background-color: var(--dark-cyan);
+}
+
+.flex-item:nth-child(2) .flex-cta{
+    color: var(--dark-cyan);
+}
+
+.flex-item:nth-child(2) .flex-cta:hover{
+    color: var(--transparent-white);
+}
+
+.flex-item:nth-child(3){
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 0 8px 8px ;
+}
+
+.flex-item:nth-child(3) .flex-cta{
+    color: var(--very-dark-cyan);
+}
+
+.flex-item:nth-child(3) .flex-cta:hover{
+    color: var(--transparent-white);
+}
+
+@media screen and (min-width:1024px) {
+    .flex-container{
+        flex-direction: row;
+        margin: auto;
+        max-width: 800px;
+        padding: 40px 45;
+    }
+
+    .flex-item:nth-child(1){
+        border-radius: 8px 0 0 8px  ;
+    }
+
+    .flex-item:nth-child(3){
+        border-radius: 0 8px 8px 0  ;
+    }
+
+    .flex-paragrahp{
+        font-size: 12px;
+    }
+
+    .flex-cta{
+        margin-top: 50px;
+    }
+}
